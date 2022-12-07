@@ -7,6 +7,10 @@ print(money < transfer)
 
 while money < transfer:
     print('Please check your balance.')
-    transfer = input('New transfer:')
+    transfer = int(input('New transfer: '))
+    if transfer > 10000:
+        print("Call Bank Mgr.")
+        break
+    
 
 print('Transfered.')
