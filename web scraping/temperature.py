@@ -9,5 +9,8 @@ webopen.close()
 
 data = BeautifulSoup(html_page,'html.parser')
 
-print(data.prettify())
+temp = data.find('h2',{'class' : 'txt_temp'})
+tital = data.find('h1',{'class' : 'text-dark1'})
+print(tital.text)
+print(temp.text)
 
